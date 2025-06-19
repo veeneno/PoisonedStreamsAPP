@@ -13,7 +13,6 @@ function createWindow() {
     }
   });
 
-  // Protege contra atalho F12 e Ctrl+Shift+I
   win.webContents.on('before-input-event', (event, input) => {
     if (
       input.key.toLowerCase() === 'i' && input.control && input.shift ||
