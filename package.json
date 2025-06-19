@@ -1,0 +1,33 @@
+{
+  "name": "veneno-app",
+  "version": "1.0.0",
+  "description": "PoisonedStreams desktop client",
+  "author": "Veneno Team",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.veneno.app",
+    "productName": "PoisonedStreams",
+    "files": [
+      "main.js",
+      "icon.ico",
+      "package.json"
+    ],
+    "win": {
+      "icon": "icon.ico",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^26.0.0",
+    "electron-builder": "^24.14.1"
+  }
+}
